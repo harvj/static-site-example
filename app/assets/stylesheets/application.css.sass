@@ -1,0 +1,111 @@
+// This is a manifest file that'll automatically include all the stylesheets available in this directory
+// and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+// the top of the compiled file, but it's generally better to create a new file per style scope.
+//= require_self
+
+@import "bourbon"
+@import "colors"
+
+$main-color: #b9d0ab
+$sec-color: #e2e6b3
+
+html
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif
+  font-size: 14px
+  background: url('lime-4.jpg')
+  color: #3b3b3b
+
+body
+  margin: 10px auto
+  padding: 5px 10px 25px 10px
+  width: 1000px
+  min-height: 600px
+  background: lighten($eggshell, 5%)
+  @include border-radius(5px)
+  @include box-shadow(0px 1px 2px 0px #d8d8d8)
+
+p
+  line-height: 1.75em
+  margin-top: 0
+
+h1
+  font-size: 250%
+  color: darken($main-color,15%)
+  //@include linear-gradient(lighten($main-color, 10%), $main-color)
+  @include border-top-radius(5px)
+  text-shadow: #777 1px 1px 1px
+  margin: 0
+  padding: 10px
+
+h2
+  font-size: 200%
+  color: white
+  padding: 10px
+  margin: 0
+  text-shadow: #333 1px 1px 2px
+
+a
+  color: darken($main-color,15%)
+  text-decoration: underline
+a:hover
+  color: darken($main-color,25%)
+  text-decoration: none
+
+
+#user-header
+  float: right
+  text-align: right
+
+#section-header
+  width: 1000px
+  height: 225px
+  position: relative
+  @include border-radius(5px)
+  .transparent
+    @include border-radius(4px)
+    background-color: rgba(230,230,230,0.4)
+    position: absolute
+    top: 10px
+    right: 10px
+
+#content
+  padding: 10px 30px
+
+#navigation
+  float: right
+  width: 220px
+  padding: 10px
+  margin: 10px 15px
+  @include linear-gradient($main-color, darken($main-color,10%))
+  @include border-radius(3px)
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+    li
+      margin: 0
+      a
+        font-size: 110%
+        font-weight: bold
+        padding: 10px
+        display: block
+        color: white
+        text-shadow: #777 1px 1px 1px
+        text-decoration: none
+      a:hover
+        //@include border-radius(3px)
+        //@include linear-gradient(lighten($main-color,10%), $main-color)
+        color: $sec-color
+      .current
+        @include border-radius(3px)
+        font-size: 120%
+        font-weight: bold
+        background: $sec-color
+        padding: 10px
+        display: block
+
+.map, .portrait
+  float: left
+  margin: 20px 30px
+  @include border-radius(3px)
+
