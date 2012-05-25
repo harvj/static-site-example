@@ -1,0 +1,1 @@
+# This is an example of static site built in Rails. 
